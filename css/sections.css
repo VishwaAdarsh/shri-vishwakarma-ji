@@ -1,0 +1,1037 @@
+/**
+ * ====================================================================
+ * 🕉️ VISHWAKARMA — THE DIVINE ARCHITECT
+ * Section Layouts & Structural Wrappers
+ * ====================================================================
+ */
+
+/* --------------------------------------------------------------------
+ * SHARED SECTION WRAPPER
+ * -------------------------------------------------------------------- */
+.section {
+  position: relative;
+  padding: var(--space-20) 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--space-32) 0;
+  }
+}
+
+/* --------------------------------------------------------------------
+ * 1. HERO SECTION (7-LAYER CINEMATIC COMPOSITION)
+ * -------------------------------------------------------------------- */
+.section-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-20) var(--container-gutter) var(--space-12);
+  overflow-x: clip;
+  overflow-y: visible;
+  background-color: var(--color-bg);
+}
+
+/* Layer 1: Background Base */
+.hero-bg-base {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(35, 20, 12, 0.7) 0%, rgba(11, 9, 7, 0.98) 75%);
+  z-index: 1;
+}
+
+/* Layer 2: Cosmic Particles */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Layer 3: Soft Celestial Light */
+.hero-celestial-glow {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90vw, 750px);
+  height: min(90vw, 750px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 196, 106, 0.16) 0%, rgba(201, 154, 61, 0.05) 50%, transparent 70%);
+  filter: blur(50px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Layer 4: Architectural / Temple Silhouette */
+.hero-temple-silhouette {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(ellipse at 50% 90%, rgba(201, 154, 61, 0.1) 0%, transparent 65%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Layer 4.5: Sacred Pre-Banner */
+.hero-pre-banner {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.hero-mantra-badge {
+  display: inline-block;
+  font-family: var(--font-sanskrit);
+  font-size: clamp(0.95rem, 2.2vw, 1.35rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gold-light);
+  letter-spacing: var(--tracking-wider);
+  padding: 5px 22px;
+  background: linear-gradient(135deg, rgba(201, 154, 61, 0.2), rgba(184, 80, 26, 0.18));
+  border: 1px solid rgba(229, 196, 106, 0.45);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 24px rgba(201, 154, 61, 0.3);
+  backdrop-filter: blur(8px);
+  text-shadow: 0 0 12px rgba(229, 196, 106, 0.5);
+}
+
+.hero-festival-tag {
+  font-family: var(--font-display);
+  font-size: clamp(0.65rem, 1.3vw, 0.78rem);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.24em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+/* Layer 5: Majestic 3D Interactive Portrait Centerpiece */
+.hero-artwork-container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1200px;
+}
+
+/* Corner Filigree Ornaments (Inside Artwork Frame) */
+.hero-frame-filigree {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 5px rgba(229, 196, 106, 0.7));
+  transition: transform 0.4s var(--ease-divine), opacity 0.4s ease;
+}
+
+.hero-frame-filigree.top-left {
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid var(--color-gold-light);
+  border-left: 2px solid var(--color-gold-light);
+  border-top-left-radius: 4px;
+}
+
+.hero-frame-filigree.top-right {
+  top: 8px;
+  right: 8px;
+  border-top: 2px solid var(--color-gold-light);
+  border-right: 2px solid var(--color-gold-light);
+  border-top-right-radius: 4px;
+}
+
+.hero-frame-filigree.bottom-left {
+  bottom: 8px;
+  left: 8px;
+  border-bottom: 2px solid var(--color-gold-light);
+  border-left: 2px solid var(--color-gold-light);
+  border-bottom-left-radius: 4px;
+}
+
+.hero-frame-filigree.bottom-right {
+  bottom: 8px;
+  right: 8px;
+  border-bottom: 2px solid var(--color-gold-light);
+  border-right: 2px solid var(--color-gold-light);
+  border-bottom-right-radius: 4px;
+}
+
+.hero-artwork-frame:hover .hero-frame-filigree {
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(229, 196, 106, 0.95));
+}
+
+/* 3D Tilting Frame */
+.hero-artwork-frame {
+  position: relative;
+  width: min(88vw, 480px);
+  aspect-ratio: 853 / 1024;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid rgba(229, 196, 106, 0.45);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.92),
+    0 0 50px rgba(201, 154, 61, 0.28),
+    inset 0 0 40px rgba(11, 9, 7, 0.6);
+  background: var(--color-bg-secondary);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+  user-select: none;
+}
+
+.hero-artwork-frame:hover,
+.hero-artwork-frame:focus-within {
+  border-color: rgba(229, 196, 106, 0.85);
+  box-shadow: 
+    0 28px 65px rgba(0, 0, 0, 0.96),
+    0 0 70px rgba(201, 154, 61, 0.45),
+    inset 0 0 30px rgba(11, 9, 7, 0.45);
+}
+
+.hero-artwork-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.04) brightness(1.02);
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.6s var(--ease-divine);
+}
+
+/* Specular Sheen Effect */
+.hero-specular-sheen {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--sheen-x, 50%) var(--sheen-y, 30%), rgba(255, 255, 255, 0.3) 0%, rgba(229, 196, 106, 0.12) 40%, transparent 65%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 3;
+  opacity: 0.65;
+  transition: opacity 0.3s ease;
+}
+
+/* Sacred Hotspots Discovery Layer */
+.hero-hotspots-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.sacred-hotspot {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: rgba(26, 20, 16, 0.88);
+  border: 1.5px solid var(--color-gold);
+  color: var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 16px rgba(201, 154, 61, 0.5);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s var(--ease-spring), background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.3s ease;
+  z-index: 5;
+}
+
+.sacred-hotspot:hover,
+.sacred-hotspot:focus-visible,
+.sacred-hotspot.is-active {
+  transform: translate(-50%, -50%) scale(1.18);
+  background: rgba(45, 30, 20, 0.95);
+  border-color: #fff;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.85), 0 0 28px rgba(229, 196, 106, 0.8);
+  outline: none;
+}
+
+.hotspot-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-gold);
+  opacity: 0;
+  animation: sacredHotspotPulse 2.4s infinite cubic-bezier(0.2, 0, 0, 1);
+  pointer-events: none;
+}
+
+@keyframes sacredHotspotPulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.hotspot-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Hotspot Glassmorphic Tooltips */
+.hotspot-tooltip {
+  position: absolute;
+  width: 250px;
+  background: rgba(18, 14, 11, 0.94);
+  border: 1px solid rgba(229, 196, 106, 0.5);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-3);
+  text-align: left;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.95), 0 0 24px rgba(201, 154, 61, 0.3);
+  backdrop-filter: blur(16px);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s var(--ease-divine), visibility 0.25s;
+  z-index: 10;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+}
+
+.hotspot-scale .hotspot-tooltip,
+.hotspot-swan .hotspot-tooltip {
+  left: 0;
+  transform: translateX(0) translateY(6px);
+}
+
+.hotspot-hammer .hotspot-tooltip,
+.hotspot-book .hotspot-tooltip {
+  left: auto;
+  right: 0;
+  transform: translateX(0) translateY(6px);
+}
+
+.hotspot-diya .hotspot-tooltip {
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+}
+
+.sacred-hotspot:hover .hotspot-tooltip,
+.sacred-hotspot:focus-visible .hotspot-tooltip,
+.sacred-hotspot.is-active .hotspot-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.hotspot-scale:hover .hotspot-tooltip,
+.hotspot-scale:focus-visible .hotspot-tooltip,
+.hotspot-scale.is-active .hotspot-tooltip,
+.hotspot-swan:hover .hotspot-tooltip,
+.hotspot-swan:focus-visible .hotspot-tooltip,
+.hotspot-swan.is-active .hotspot-tooltip {
+  transform: translateX(0) translateY(0);
+}
+
+.hotspot-hammer:hover .hotspot-tooltip,
+.hotspot-hammer:focus-visible .hotspot-tooltip,
+.hotspot-hammer.is-active .hotspot-tooltip,
+.hotspot-book:hover .hotspot-tooltip,
+.hotspot-book:focus-visible .hotspot-tooltip,
+.hotspot-book.is-active .hotspot-tooltip {
+  transform: translateX(0) translateY(0);
+}
+
+.tooltip-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gold-light);
+  margin-bottom: 4px;
+  line-height: var(--leading-tight);
+}
+
+.tooltip-desc {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--color-text-secondary);
+}
+
+/* Bottom Hint & Darshan Expand Button */
+.hero-interaction-hint {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  background: rgba(14, 11, 9, 0.75);
+  border: 1px solid rgba(229, 196, 106, 0.3);
+  border-radius: var(--radius-full);
+  padding: 3px 14px;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  color: var(--color-gold-light);
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+  opacity: 0.85;
+  transition: opacity 0.5s ease;
+}
+
+.hero-interaction-hint.is-hidden {
+  opacity: 0;
+}
+
+.btn-hero-darshan-expand {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(20, 16, 12, 0.88);
+  border: 1px solid rgba(229, 196, 106, 0.45);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.12em;
+  color: var(--color-gold-light);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 16px rgba(201, 154, 61, 0.25);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s var(--ease-spring);
+}
+
+.btn-hero-darshan-expand:hover {
+  background: rgba(45, 30, 18, 0.95);
+  border-color: var(--color-gold-light);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.85), 0 0 24px rgba(201, 154, 61, 0.45);
+}
+
+.darshan-expand-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* Interactive Shloka Ribbon */
+.hero-shloka-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: 6px 18px;
+  background: rgba(26, 18, 12, 0.75);
+  border: 1px solid rgba(201, 154, 61, 0.35);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s var(--ease-spring);
+  backdrop-filter: blur(8px);
+}
+
+.hero-shloka-ribbon:hover {
+  background: rgba(45, 30, 18, 0.9);
+  border-color: var(--color-gold);
+  color: var(--color-ivory);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6), 0 0 20px rgba(201, 154, 61, 0.3);
+}
+
+.shloka-sanskrit {
+  font-family: var(--font-sanskrit);
+  color: var(--color-gold-light);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+}
+
+.shloka-divider {
+  color: var(--color-gold);
+  opacity: 0.6;
+}
+
+.shloka-translation {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.78rem;
+}
+
+.shloka-chime-icon {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  transition: transform 0.25s var(--ease-spring);
+}
+
+.hero-shloka-ribbon:hover .shloka-chime-icon {
+  transform: scale(1.25) rotate(15deg);
+  opacity: 1;
+}
+
+/* Layer 6: Hierarchical Typography and CTA Content */
+.hero-content {
+  position: relative;
+  z-index: 6;
+  max-width: var(--container-md);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-mantra-line {
+  font-family: var(--font-sanskrit);
+  font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+  color: var(--color-gold);
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-1);
+  text-shadow: 0 0 16px rgba(201, 154, 61, 0.4);
+}
+
+.hero-title-hindi {
+  font-family: var(--font-devotional);
+  font-size: clamp(2.5rem, 6.5vw, 4.75rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gold-light);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 0 40px var(--color-celestial-glow);
+  margin-bottom: var(--space-1);
+}
+
+.hero-title-en {
+  font-family: var(--font-display);
+  font-size: clamp(0.85rem, 2vw, 1.35rem);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-ivory);
+  opacity: 0.95;
+  margin-bottom: var(--space-3);
+}
+
+.hero-supporting-copy {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin: 0 auto var(--space-5);
+  line-height: var(--leading-relaxed);
+}
+
+/* Layer 7: Foreground Atmospheric Gradient */
+.hero-foreground-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(180deg, transparent 0%, var(--color-bg) 100%);
+  z-index: 7;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------
+ * 2. INTRO TRANSITION SECTION ("BEFORE THE BUILDERS...")
+ * -------------------------------------------------------------------- */
+.section-intro-transition {
+  position: relative;
+  background-color: var(--color-bg-secondary);
+  background-image: radial-gradient(circle at 50% 30%, rgba(58, 38, 23, 0.3) 0%, var(--color-bg-secondary) 80%);
+  padding: var(--space-24) var(--container-gutter);
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.intro-pretitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.intro-heading-en {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-ivory);
+  max-width: 800px;
+  margin: 0 auto var(--space-4);
+  text-transform: uppercase;
+}
+
+.intro-heading-hindi {
+  font-family: var(--font-devotional);
+  font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gold-light);
+  margin-bottom: var(--space-6);
+  line-height: var(--leading-snug);
+}
+
+.intro-body-text {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------
+ * 3. VEDIC INTRODUCTION TEASER
+ * -------------------------------------------------------------------- */
+.section-vedic-teaser {
+  position: relative;
+  background-color: var(--color-bg);
+  padding: var(--space-24) var(--container-gutter);
+  text-align: center;
+}
+
+.vedic-teaser-card {
+  max-width: var(--container-md);
+  margin: 0 auto;
+  padding: var(--space-10) var(--space-8);
+  background: radial-gradient(ellipse at center, rgba(35, 20, 12, 0.4) 0%, rgba(21, 16, 12, 0.8) 100%);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+}
+
+.vedic-source-number {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-gold-light);
+  margin: var(--space-2) 0 var(--space-4);
+}
+
+.vedic-teaser-desc {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 auto var(--space-6);
+}
+
+/* --------------------------------------------------------------------
+ * 4. PHASE 2 GATEWAY / TRANSITION
+ * -------------------------------------------------------------------- */
+.section-phase2-gateway {
+  position: relative;
+  padding: var(--space-24) var(--container-gutter);
+  text-align: center;
+  background: radial-gradient(circle at 50% 60%, rgba(201, 154, 61, 0.12) 0%, var(--color-bg) 75%);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.gateway-tag {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.gateway-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-ivory);
+  margin-bottom: var(--space-6);
+}
+
+.gateway-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-full);
+  background: rgba(21, 16, 12, 0.85);
+  color: var(--color-gold-light);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 20px var(--color-celestial-glow);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-divine);
+}
+
+.gateway-cta:hover {
+  background: rgba(201, 154, 61, 0.2);
+  border-color: var(--color-gold-light);
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 30px rgba(229, 196, 106, 0.45);
+}
+
+/* --------------------------------------------------------------------
+ * 5. PHASE 2: CHAPTER NARRATIVE LAYOUTS (01 - 07)
+ * -------------------------------------------------------------------- */
+.story-chapter-section {
+  position: relative;
+  padding: var(--space-24) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.chapter-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .chapter-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+
+  .chapter-inner.reversed {
+    direction: rtl;
+  }
+
+  .chapter-inner.reversed > * {
+    direction: ltr;
+  }
+}
+
+.chapter-visual-wrapper {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-medium);
+  aspect-ratio: 16 / 10;
+  background-color: var(--color-bg-secondary);
+}
+
+.chapter-visual-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-divine);
+}
+
+.chapter-visual-wrapper:hover img {
+  transform: scale(1.04);
+}
+
+.chapter-narrative-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  text-align: left;
+}
+
+.chapter-tagline {
+  font-family: var(--font-devotional);
+  font-size: var(--text-lg);
+  color: var(--color-gold);
+  line-height: var(--leading-snug);
+  border-left: 2px solid var(--color-gold);
+  padding-left: var(--space-4);
+  margin: var(--space-2) 0;
+}
+
+.chapter-sanskrit-card {
+  background: rgba(35, 20, 12, 0.5);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5) var(--space-6);
+  margin: var(--space-3) 0;
+  text-align: center;
+}
+
+.chapter-sanskrit-verse {
+  font-family: var(--font-sanskrit);
+  font-size: var(--text-base);
+  color: var(--color-gold-light);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-2);
+}
+
+.chapter-sanskrit-ref {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  display: block;
+}
+
+/* Chapter 01 Theme: Cosmic Void */
+.section-chapter-01 {
+  background: radial-gradient(circle at 80% 20%, rgba(201, 154, 61, 0.08) 0%, var(--color-bg) 70%);
+}
+
+/* Chapter 02 Theme: All-Seeing Vision */
+.section-chapter-02 {
+  background: radial-gradient(circle at 20% 80%, rgba(58, 17, 17, 0.2) 0%, var(--color-bg) 70%);
+}
+
+/* Chapter 03 Theme: Divine Craftsman & Vastu */
+.section-chapter-03 {
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
+}
+
+/* Chapter 04 Theme: Works of Divine Craft */
+.section-chapter-04 {
+  background: radial-gradient(ellipse at center, rgba(35, 20, 12, 0.5) 0%, var(--color-bg) 80%);
+}
+
+/* Chapter 05 Theme: 1900 Traditional Katha */
+.section-chapter-05 {
+  background: linear-gradient(180deg, var(--color-bg) 0%, rgba(58, 38, 23, 0.3) 50%, var(--color-bg) 100%);
+}
+
+/* Chapter 06 Theme: Five Pillars of Meaning */
+.section-chapter-06 {
+  background-color: var(--color-bg-secondary);
+}
+
+/* Chapter 07 Theme: Gateway to Puja */
+.section-chapter-07 {
+  background: radial-gradient(circle at 50% 50%, rgba(201, 154, 61, 0.15) 0%, var(--color-bg) 75%);
+  text-align: center;
+  padding: var(--space-32) var(--container-gutter);
+}
+
+/* ====================================================================
+ * PHASE 3 SECTIONS: PUJA, CRAFTSMANSHIP & LIVING LEGACY
+ * ==================================================================== */
+
+/* Section 01: The Creation Continues */
+.section-puja-intro {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 0%, rgba(201, 154, 61, 0.2) 0%, var(--color-bg) 70%);
+  padding: var(--space-28) var(--container-gutter);
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Section 02: What is Vishwakarma Puja? */
+.section-what-is-puja {
+  position: relative;
+  background: linear-gradient(180deg, var(--color-bg) 0%, rgba(36, 13, 13, 0.25) 50%, var(--color-bg) 100%);
+  padding: var(--space-24) var(--container-gutter);
+}
+
+/* Section 03: Why Do We Worship Our Tools? */
+.section-tools-exhibit {
+  position: relative;
+  background: var(--color-bg-secondary);
+  padding: var(--space-24) var(--container-gutter);
+}
+
+/* Section 04: The Puja Journey */
+.section-puja-journey {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 50%, rgba(201, 154, 61, 0.08) 0%, var(--color-bg) 75%);
+  padding: var(--space-28) var(--container-gutter);
+}
+
+/* Section 05: Workplace as a Sacred Space */
+.section-workplace-sacred {
+  position: relative;
+  background: var(--color-bg);
+  padding: var(--space-24) var(--container-gutter);
+}
+
+/* Section 06: Mantra & Devotion */
+.section-mantra-devotion {
+  position: relative;
+  background: radial-gradient(circle at 50% 50%, rgba(30, 20, 10, 0.95) 0%, #060504 100%);
+  padding: var(--space-32) var(--container-gutter);
+  text-align: center;
+}
+
+/* Section 07: From Artisan to Modern Maker */
+.section-artisan-to-maker {
+  position: relative;
+  background: linear-gradient(180deg, var(--color-bg) 0%, rgba(30, 22, 14, 0.4) 50%, var(--color-bg) 100%);
+  padding: var(--space-28) var(--container-gutter);
+}
+
+/* Section 08: The Dignity of Work */
+.section-dignity-of-work {
+  position: relative;
+  background: var(--color-bg-secondary);
+  padding: var(--space-24) var(--container-gutter);
+}
+
+/* Section 09: The Living Tradition */
+.section-living-tradition {
+  position: relative;
+  background: radial-gradient(circle at 50% 30%, rgba(201, 154, 61, 0.12) 0%, var(--color-bg) 75%);
+  padding: var(--space-28) var(--container-gutter);
+}
+
+/* Section 10: A Moment of Reflection & Darshan Gateway */
+.section-reflection-gateway {
+  position: relative;
+  background: #060504;
+  padding: var(--space-32) var(--container-gutter) var(--space-40);
+  text-align: center;
+}
+
+/* ====================================================================
+ * PHASE 4 SECTIONS: DARSHAN, BLESSING & SOURCES
+ * ==================================================================== */
+
+/* Section 01: Darshan Visual Gallery */
+.section-darshan {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 20%, rgba(30, 20, 12, 0.9) 0%, #080605 80%);
+  padding: var(--space-32) var(--container-gutter);
+}
+
+/* Section 02: Final Devotional Experience & Blessing */
+.section-final-blessing {
+  position: relative;
+  background: radial-gradient(circle at 50% 40%, rgba(38, 24, 14, 0.7) 0%, #050403 85%);
+  padding: var(--space-32) var(--container-gutter);
+  text-align: center;
+}
+
+/* Section 37: Sources & Traditions Directory */
+.section-sources-traditions {
+  position: relative;
+  background: #090706;
+  padding: var(--space-28) var(--container-gutter);
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Section 38: About This Journey */
+.section-about-journey {
+  position: relative;
+  background: var(--color-bg);
+  padding: var(--space-16) var(--container-gutter) var(--space-24);
+}
+
+/* --------------------------------------------------------------------
+ * SITE FOOTER (PHASE 4 MINIMAL & REVERENT)
+ * -------------------------------------------------------------------- */
+.site-footer {
+  padding: var(--space-16) var(--container-gutter) var(--space-12);
+  border-top: 1px solid var(--border-subtle);
+  background-color: #070504;
+  text-align: center;
+}
+
+.footer-om {
+  font-family: var(--font-devotional);
+  font-size: var(--text-2xl);
+  color: var(--color-gold);
+  margin-bottom: var(--space-2);
+}
+
+.footer-title {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-ivory);
+  margin-bottom: 2px;
+}
+
+.footer-subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-gold-light);
+  margin-bottom: var(--space-6);
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.footer-nav a {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--duration-fast);
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--color-gold-light);
+}
+
+.footer-motto-en {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-ivory);
+  margin-bottom: var(--space-1);
+}
+
+.footer-motto-hi {
+  font-family: var(--font-devotional);
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  margin-bottom: var(--space-8);
+}
+
+.footer-copyright {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+}

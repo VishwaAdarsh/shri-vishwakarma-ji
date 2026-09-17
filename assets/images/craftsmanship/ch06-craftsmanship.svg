@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="craftBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080605"/>
+      <stop offset="60%" stop-color="#19110B"/>
+      <stop offset="100%" stop-color="#0B0907"/>
+    </linearGradient>
+    <radialGradient id="forgeCenter" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#FFA24C" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#C99A3D" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#080605" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5DB"/>
+      <stop offset="50%" stop-color="#C99A3D"/>
+      <stop offset="100%" stop-color="#704B10"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#craftBg)"/>
+  <circle cx="600" cy="350" r="350" fill="url(#forgeCenter)"/>
+
+  <!-- Five Sacred Connecting Geometric Rays -->
+  <g stroke="#C99A3D" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.45">
+    <line x1="600" y1="350" x2="600" y2="140"/>
+    <line x1="600" y1="350" x2="800" y2="280"/>
+    <line x1="600" y1="350" x2="720" y2="520"/>
+    <line x1="600" y1="350" x2="480" y2="520"/>
+    <line x1="600" y1="350" x2="400" y2="280"/>
+    <polygon points="600,140 800,280 720,520 480,520 400,280" fill="none" stroke="#E5C46A" stroke-width="1"/>
+  </g>
+
+  <!-- Center: Blacksmith Anvil & Sacred Spark -->
+  <g transform="translate(600, 370)">
+    <!-- Heavy Anvil Silhouette -->
+    <path d="M -90,-20 L 70,-20 L 110,-10 L 70,0 L 40,50 L 70,70 L -70,70 L -40,50 L -70,0 Z" fill="#241B15" stroke="url(#goldShine)" stroke-width="2"/>
+    <!-- Glowing Hammer Rising Above Anvil -->
+    <g transform="translate(0, -60) rotate(-25)">
+      <rect x="-8" y="-45" width="16" height="90" rx="4" fill="#C99A3D"/>
+      <rect x="-35" y="-55" width="70" height="24" rx="4" fill="url(#goldShine)"/>
+    </g>
+    <!-- Sparks from Strike -->
+    <circle cx="0" cy="-20" r="4" fill="#FFFFFF"/>
+    <line x1="0" y1="-20" x2="-25" y2="-45" stroke="#FFA24C" stroke-width="2"/>
+    <line x1="0" y1="-20" x2="30" y2="-40" stroke="#FFA24C" stroke-width="2"/>
+    <line x1="0" y1="-20" x2="15" y2="-55" stroke="#FFE28A" stroke-width="1.5"/>
+  </g>
+
+  <!-- 5 Surrounding Nodes (The Five Pillars) -->
+  <!-- Top: Knowledge (Pothi/Scripture) -->
+  <g transform="translate(600, 140)">
+    <circle cx="0" cy="0" r="38" fill="#1A120C" stroke="#E5C46A" stroke-width="2"/>
+    <path d="M -16,-10 C -8,-14 0,-10 0,-10 C 0,-10 8,-14 16,-10 L 16,12 C 8,8 0,12 0,12 C 0,12 -8,8 -16,12 Z" fill="url(#goldShine)"/>
+  </g>
+
+  <!-- Right: Craft (Chisel) -->
+  <g transform="translate(800, 280)">
+    <circle cx="0" cy="0" r="38" fill="#1A120C" stroke="#E5C46A" stroke-width="2"/>
+    <path d="M -4,-22 L 4,-22 L 6,12 L 0,22 L -6,12 Z" fill="url(#goldShine)"/>
+  </g>
+
+  <!-- Bottom Right: Discipline (Compass) -->
+  <g transform="translate(720, 520)">
+    <circle cx="0" cy="0" r="38" fill="#1A120C" stroke="#E5C46A" stroke-width="2"/>
+    <path d="M 0,-18 L -12,18 L -6,18 L 0,-10 L 6,18 L 12,18 Z" fill="url(#goldShine)"/>
+    <circle cx="0" cy="-18" r="4" fill="#FFF5DB"/>
+  </g>
+
+  <!-- Bottom Left: Work (Hands/Forge Hearth) -->
+  <g transform="translate(480, 520)">
+    <circle cx="0" cy="0" r="38" fill="#1A120C" stroke="#E5C46A" stroke-width="2"/>
+    <path d="M -12,-8 C -12,12 12,12 12,-8 Z" fill="url(#goldShine)"/>
+    <circle cx="0" cy="-8" r="5" fill="#FFA24C"/>
+  </g>
+
+  <!-- Left: Creation (Lotus unfolding) -->
+  <g transform="translate(400, 280)">
+    <circle cx="0" cy="0" r="38" fill="#1A120C" stroke="#E5C46A" stroke-width="2"/>
+    <path d="M 0,12 C -15,0 -12,-15 0,-18 C 12,-15 15,0 0,12 Z" fill="url(#goldShine)"/>
+  </g>
+
+  <text x="600" y="670" font-family="'Cinzel', serif" font-size="16" letter-spacing="6" fill="#C99A3D" text-anchor="middle">
+    CREATION · CRAFT · KNOWLEDGE · DISCIPLINE · WORK
+  </text>
+</svg>

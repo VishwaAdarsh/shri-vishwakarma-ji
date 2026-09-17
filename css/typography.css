@@ -1,0 +1,154 @@
+/**
+ * ====================================================================
+ * 🕉️ VISHWAKARMA — THE DIVINE ARCHITECT
+ * Typography System
+ * ====================================================================
+ * Display: Cinzel (Architectural dignity, cosmic gravitas)
+ * Body: Inter (Crisp, modern readability)
+ * Devotional / Sanskrit: Noto Serif Devanagari (Sacred precision)
+ */
+
+/* --------------------------------------------------------------------
+ * FONT FAMILY UTILITIES
+ * -------------------------------------------------------------------- */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-devotional {
+  font-family: var(--font-devotional);
+}
+
+.font-sanskrit {
+  font-family: var(--font-sanskrit);
+}
+
+/* --------------------------------------------------------------------
+ * HEADINGS & DISPLAY STYLES
+ * -------------------------------------------------------------------- */
+.heading-hero {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.8), 0 0 40px var(--color-celestial-glow);
+}
+
+.heading-chapter-number {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: inline-block;
+  margin-bottom: var(--space-2);
+}
+
+.heading-1 {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-ivory);
+}
+
+.heading-2 {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-ivory);
+}
+
+.heading-3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-gold-light);
+}
+
+/* --------------------------------------------------------------------
+ * HINDI & SANSKRIT DEVOTIONAL TEXT
+ * -------------------------------------------------------------------- */
+.text-devotional-title {
+  font-family: var(--font-devotional);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gold-light);
+  line-height: var(--leading-tight);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.text-sanskrit-verse {
+  font-family: var(--font-sanskrit);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gold-light);
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.text-devotional-hindi {
+  font-family: var(--font-devotional);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ivory);
+}
+
+/* --------------------------------------------------------------------
+ * BODY COPY & EDITORIAL PARAGRAPHS
+ * -------------------------------------------------------------------- */
+.body-lead {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+}
+
+.body-text {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--text-secondary);
+}
+
+.body-caption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--text-tertiary);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-gold-light {
+  color: var(--color-gold-light);
+}
+
+.text-muted {
+  color: var(--text-secondary);
+}
+
+.text-subtle {
+  color: var(--text-tertiary);
+}

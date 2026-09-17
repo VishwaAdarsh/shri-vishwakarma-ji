@@ -1,0 +1,160 @@
+/**
+ * ====================================================================
+ * 🕉️ VISHWAKARMA — THE DIVINE ARCHITECT
+ * Base Styles & Accessibility Foundation
+ * ====================================================================
+ */
+
+html {
+  font-size: 16px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  background-color: var(--color-bg);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(201, 154, 61, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 100% 50%, rgba(58, 17, 17, 0.15) 0%, transparent 50%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* --------------------------------------------------------------------
+ * ACCESSIBILITY: Skip Link
+ * -------------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  z-index: var(--z-tooltip);
+  background: var(--color-gold);
+  color: var(--color-bg);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-xs);
+  transition: top var(--duration-fast) var(--ease-sharp);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------
+ * ACCESSIBILITY: Focus States
+ * -------------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+/* --------------------------------------------------------------------
+ * SELECTION STYLES
+ * -------------------------------------------------------------------- */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-bg);
+}
+
+::-moz-selection {
+  background-color: var(--color-gold);
+  color: var(--color-bg);
+}
+
+/* --------------------------------------------------------------------
+ * SCROLLBAR STYLING
+ * -------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brown);
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-subtle);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dark);
+}
+
+/* --------------------------------------------------------------------
+ * COMMON LAYOUT WRAPPERS
+ * -------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-md);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
+}
+
+.container-reading {
+  width: 100%;
+  max-width: var(--container-sm);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
+}
+
+/* --------------------------------------------------------------------
+ * UTILITY ACCENTS & DIVIDERS
+ * -------------------------------------------------------------------- */
+.gold-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: var(--space-6) auto;
+  border: none;
+}
+
+.gold-divider-left {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-gold), transparent);
+  margin: var(--space-6) 0;
+  border: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

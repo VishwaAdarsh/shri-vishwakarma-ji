@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2DFB3"/>
+      <stop offset="50%" stop-color="#C99A3D"/>
+      <stop offset="80%" stop-color="#5C4212"/>
+      <stop offset="100%" stop-color="#1F180A"/>
+    </linearGradient>
+    <pattern id="latheGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#C99A3D" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+    <filter id="latheGlow">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" fill="#0E0C09"/>
+  <rect width="400" height="300" fill="url(#latheGrid)"/>
+
+  <!-- Radial Lathe Axis & Sun Lathe Connection -->
+  <g stroke="#C99A3D" stroke-width="0.75" opacity="0.35">
+    <circle cx="200" cy="140" r="100" fill="none" stroke-dasharray="6,4"/>
+    <circle cx="200" cy="140" r="60" fill="none" stroke-dasharray="2,4"/>
+    <line x1="60" y1="140" x2="340" y2="140" stroke-dasharray="4,4"/>
+    <line x1="200" y1="20" x2="200" y2="260" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Precision Gear & Chuck Spindle -->
+  <g transform="translate(200, 140)" filter="url(#latheGlow)">
+    <!-- Precision Cogwheel -->
+    <circle cx="0" cy="0" r="55" fill="none" stroke="url(#metalGrad)" stroke-width="8"/>
+    <!-- 12 Gear Teeth -->
+    <rect x="-5" y="-66" width="10" height="14" rx="2" fill="url(#metalGrad)"/>
+    <rect x="-5" y="52" width="10" height="14" rx="2" fill="url(#metalGrad)"/>
+    <rect x="-66" y="-5" width="14" height="10" rx="2" fill="url(#metalGrad)"/>
+    <rect x="52" y="-5" width="14" height="10" rx="2" fill="url(#metalGrad)"/>
+    <g transform="rotate(30)"><rect x="-5" y="-66" width="10" height="14" rx="2" fill="url(#metalGrad)"/><rect x="-5" y="52" width="10" height="14" rx="2" fill="url(#metalGrad)"/></g>
+    <g transform="rotate(60)"><rect x="-5" y="-66" width="10" height="14" rx="2" fill="url(#metalGrad)"/><rect x="-5" y="52" width="10" height="14" rx="2" fill="url(#metalGrad)"/></g>
+    <g transform="rotate(120)"><rect x="-5" y="-66" width="10" height="14" rx="2" fill="url(#metalGrad)"/><rect x="-5" y="52" width="10" height="14" rx="2" fill="url(#metalGrad)"/></g>
+    <g transform="rotate(150)"><rect x="-5" y="-66" width="10" height="14" rx="2" fill="url(#metalGrad)"/><rect x="-5" y="52" width="10" height="14" rx="2" fill="url(#metalGrad)"/></g>
+    
+    <!-- Central Lathe Chuck -->
+    <circle cx="0" cy="0" r="34" fill="#291F0C" stroke="url(#metalGrad)" stroke-width="3"/>
+    <!-- 3-Jaw Chuck Clamps -->
+    <rect x="-4" y="-30" width="8" height="18" fill="#FFF2A3" stroke="#3A2807"/>
+    <g transform="rotate(120)"><rect x="-4" y="-30" width="8" height="18" fill="#FFF2A3" stroke="#3A2807"/></g>
+    <g transform="rotate(240)"><rect x="-4" y="-30" width="8" height="18" fill="#FFF2A3" stroke="#3A2807"/></g>
+    
+    <!-- Spindle Center & Consecration Tilak -->
+    <circle cx="0" cy="0" r="10" fill="#140D04" stroke="#C99A3D" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="4" fill="#B31D1D"/>
+    <circle cx="0" cy="0" r="1.5" fill="#FFEAA7"/>
+
+    <!-- Lathe Turning Cutting Tool Bit (Bottom Right) -->
+    <polygon points="50,45 80,65 95,50 65,30" fill="url(#metalGrad)" stroke="#38260B" stroke-width="1.5"/>
+    <polygon points="45,42 55,42 50,52" fill="#FFEAA7"/>
+  </g>
+
+  <text x="30" y="270" fill="#C99A3D" font-family="'Cinzel', serif" font-size="11" letter-spacing="2">PRECISION ENGINEERING · MECHANICAL ORDER</text>
+  <text x="370" y="270" text-anchor="end" fill="#E5B869" font-family="'Noto Serif Devanagari', serif" font-size="12">भ्रमि एवं यन्त्र · यांत्रिकी</text>
+</svg>

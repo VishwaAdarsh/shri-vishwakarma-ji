@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="chiselSteel" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FFF5B8"/>
+      <stop offset="35%" stop-color="#C99A3D"/>
+      <stop offset="70%" stop-color="#5C4212"/>
+      <stop offset="100%" stop-color="#2D2109"/>
+    </linearGradient>
+    <pattern id="chiselGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#C99A3D" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+    <filter id="chiselGlow">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" fill="#0E0C09"/>
+  <rect width="400" height="300" fill="url(#chiselGrid)"/>
+
+  <!-- Sculptor's Sacred Proportional Geometry -->
+  <g stroke="#C99A3D" stroke-width="0.75" opacity="0.35">
+    <polygon points="200,40 310,150 200,260 90,150" fill="none" stroke-dasharray="4,4"/>
+    <circle cx="200" cy="150" r="90" fill="none" stroke-dasharray="3,6"/>
+    <line x1="90" y1="40" x2="310" y2="260" stroke-dasharray="2,4"/>
+    <line x1="310" y1="40" x2="90" y2="260" stroke-dasharray="2,4"/>
+  </g>
+
+  <!-- Chisel Object -->
+  <g transform="translate(200, 150) rotate(45)" filter="url(#chiselGlow)">
+    <!-- Striking Head -->
+    <rect x="-14" y="-110" width="28" height="18" rx="2" fill="#523A12" stroke="#C99A3D" stroke-width="1.5"/>
+    <!-- Octagonal Shaft -->
+    <polygon points="-12,-92 12,-92 10,40 -10,40" fill="url(#chiselSteel)" stroke="#38260B" stroke-width="1.5"/>
+    <!-- Bevel Blade Edge -->
+    <polygon points="-10,40 10,40 18,75 -18,75" fill="url(#chiselSteel)" stroke="#C99A3D" stroke-width="1.5"/>
+    <polygon points="-18,75 18,75 16,85 -16,85" fill="#FFEAA7" stroke="#FFF5B8" stroke-width="1"/>
+    <!-- Vermilion Consecration Point -->
+    <circle cx="0" cy="0" r="4.5" fill="#B31D1D"/>
+    <circle cx="0" cy="0" r="1.5" fill="#FFEAA7"/>
+    <!-- Spark of Divine Sculpting -->
+    <path d="M 0,85 L -8,98 M 0,85 L 8,98 M 0,85 L 0,105" stroke="#FFEAA7" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <text x="30" y="270" fill="#C99A3D" font-family="'Cinzel', serif" font-size="11" letter-spacing="2">SCULPTURE &amp; STONE · TANGIBLE SACREDNESS</text>
+  <text x="370" y="270" text-anchor="end" fill="#E5B869" font-family="'Noto Serif Devanagari', serif" font-size="12">टंक / छेनी · शिल्प साधना</text>
+</svg>

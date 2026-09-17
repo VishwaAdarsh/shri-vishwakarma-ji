@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="aartiGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFA826" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#C99A3D" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0B0907" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="flameCenter" cx="50%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#FFF3A8"/>
+      <stop offset="60%" stop-color="#FF9E1B"/>
+      <stop offset="90%" stop-color="#D83000"/>
+      <stop offset="100%" stop-color="#0B0907" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brassLamp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5B8"/>
+      <stop offset="45%" stop-color="#C99A3D"/>
+      <stop offset="85%" stop-color="#735212"/>
+      <stop offset="100%" stop-color="#382607"/>
+    </linearGradient>
+    <filter id="flameFilter">
+      <feGaussianBlur stdDeviation="4" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="#0B0907"/>
+  <circle cx="300" cy="200" r="180" fill="url(#aartiGlow)"/>
+
+  <!-- Sacred Aarti Thali / Deepa Platform -->
+  <g transform="translate(300, 240)">
+    <!-- Thali Base -->
+    <ellipse cx="0" cy="50" rx="140" ry="30" fill="url(#brassLamp)" stroke="#4A340C" stroke-width="2"/>
+    <ellipse cx="0" cy="45" rx="125" ry="22" fill="#241707"/>
+    
+    <!-- Central Brass Deepa Stand -->
+    <path d="M -16,45 L -8,0 L 8,0 L 16,45 Z" fill="url(#brassLamp)" stroke="#382607" stroke-width="1.5"/>
+    <ellipse cx="0" cy="0" rx="45" ry="12" fill="url(#brassLamp)" stroke="#4A340C" stroke-width="1.5"/>
+    <ellipse cx="0" cy="-2" rx="35" ry="8" fill="#3D1212"/>
+    
+    <!-- 5 Tiered Aarti Flames (Panchapradeep) -->
+    <!-- Main Center Flame -->
+    <g transform="translate(0, -12)" filter="url(#flameFilter)">
+      <circle cx="0" cy="-30" r="35" fill="url(#flameCenter)"/>
+      <path d="M 0,5 Q -14,-25 0,-55 Q 14,-25 0,5 Z" fill="#FFF29E"/>
+      <path d="M 0,0 Q -6,-15 0,-35 Q 6,-15 0,0 Z" fill="#FFFFFF"/>
+    </g>
+    <!-- Left Inner Flame -->
+    <g transform="translate(-22, -6)" filter="url(#flameFilter)">
+      <circle cx="0" cy="-20" r="22" fill="url(#flameCenter)"/>
+      <path d="M 0,2 Q -10,-18 0,-38 Q 10,-18 0,2 Z" fill="#FFF29E"/>
+    </g>
+    <!-- Right Inner Flame -->
+    <g transform="translate(22, -6)" filter="url(#flameFilter)">
+      <circle cx="0" cy="-20" r="22" fill="url(#flameCenter)"/>
+      <path d="M 0,2 Q -10,-18 0,-38 Q 10,-18 0,2 Z" fill="#FFF29E"/>
+    </g>
+    <!-- Left Outer Flame -->
+    <g transform="translate(-40, -2)" filter="url(#flameFilter)">
+      <circle cx="0" cy="-14" r="16" fill="url(#flameCenter)"/>
+      <path d="M 0,2 Q -7,-12 0,-26 Q 7,-12 0,2 Z" fill="#FFF29E"/>
+    </g>
+    <!-- Right Outer Flame -->
+    <g transform="translate(40, -2)" filter="url(#flameFilter)">
+      <circle cx="0" cy="-14" r="16" fill="url(#flameCenter)"/>
+      <path d="M 0,2 Q -7,-12 0,-26 Q 7,-12 0,2 Z" fill="#FFF29E"/>
+    </g>
+  </g>
+
+  <!-- Ceremonial Ghanta (Temple Bell) on Left -->
+  <g transform="translate(130, 260)">
+    <path d="M -15,20 Q -20,40 -28,45 L 28,45 Q 20,40 15,20 L 8,-10 L -8,-10 Z" fill="url(#brassLamp)" stroke="#382607" stroke-width="1.5"/>
+    <rect x="-4" y="-30" width="8" height="20" rx="2" fill="url(#brassLamp)"/>
+    <circle cx="0" cy="-35" r="7" fill="url(#brassLamp)"/>
+    <!-- Sound Waves -->
+    <path d="M -35,25 Q -45,35 -35,45" fill="none" stroke="#C99A3D" stroke-width="1.5" opacity="0.6"/>
+    <path d="M -45,18 Q -60,35 -45,52" fill="none" stroke="#C99A3D" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Sacred Incense Spirals -->
+  <path d="M 450,280 Q 480,220 440,170 Q 400,120 460,70" fill="none" stroke="#E5B869" stroke-width="1.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M 465,275 Q 495,230 465,180 Q 435,130 480,80" fill="none" stroke="#E5B869" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+
+  <!-- Aarti Benediction Title -->
+  <text x="300" y="50" text-anchor="middle" fill="#E5B869" font-family="'Cinzel', serif" font-size="14" letter-spacing="4">THE SACRED AARTI &amp; BENEDICTION</text>
+  <text x="300" y="375" text-anchor="middle" fill="#C99A3D" font-family="'Noto Serif Devanagari', serif" font-size="15">"जय श्री विश्वकर्मा प्रभु, सकल सृष्टि के कर्ता..."</text>
+</svg>

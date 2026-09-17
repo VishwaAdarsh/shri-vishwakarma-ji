@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080605"/>
+      <stop offset="50%" stop-color="#15100C"/>
+      <stop offset="100%" stop-color="#0B0907"/>
+    </linearGradient>
+    <radialGradient id="templeGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#E5C46A" stop-opacity="0.3"/>
+      <stop offset="40%" stop-color="#C99A3D" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0B0907" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5EBD5"/>
+      <stop offset="50%" stop-color="#C99A3D"/>
+      <stop offset="100%" stop-color="#8C6721"/>
+    </linearGradient>
+    <linearGradient id="pillarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A1410"/>
+      <stop offset="50%" stop-color="#2D221A"/>
+      <stop offset="100%" stop-color="#15100C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#skyGrad)"/>
+  <circle cx="600" cy="320" r="380" fill="url(#templeGlow)"/>
+
+  <!-- Geometric Grid & Vastu Purusha Mandala Guidelines -->
+  <g opacity="0.18" stroke="#C99A3D" stroke-width="1">
+    <line x1="100" y1="375" x2="1100" y2="375"/>
+    <line x1="600" y1="50" x2="600" y2="700"/>
+    <circle cx="600" cy="375" r="280" fill="none"/>
+    <circle cx="600" cy="375" r="200" fill="none"/>
+    <circle cx="600" cy="375" r="120" fill="none"/>
+    <rect x="400" y="175" width="400" height="400" fill="none"/>
+    <polygon points="600,175 800,375 600,575 400,375" fill="none"/>
+  </g>
+
+  <!-- Temple Pillars Silhouette -->
+  <g fill="url(#pillarGrad)" stroke="#C99A3D" stroke-width="1" opacity="0.85">
+    <!-- Left Pillars -->
+    <rect x="120" y="180" width="70" height="520" rx="4"/>
+    <rect x="100" y="160" width="110" height="25" rx="2" fill="#241B14"/>
+    <rect x="90" y="680" width="130" height="30" rx="2" fill="#241B14"/>
+    
+    <rect x="250" y="240" width="55" height="460" rx="4"/>
+    <rect x="235" y="225" width="85" height="20" rx="2" fill="#241B14"/>
+
+    <!-- Right Pillars -->
+    <rect x="1010" y="180" width="70" height="520" rx="4"/>
+    <rect x="990" y="160" width="110" height="25" rx="2" fill="#241B14"/>
+    <rect x="980" y="680" width="130" height="30" rx="2" fill="#241B14"/>
+
+    <rect x="895" y="240" width="55" height="460" rx="4"/>
+    <rect x="880" y="225" width="85" height="20" rx="2" fill="#241B14"/>
+  </g>
+
+  <!-- Center Shikhara (Temple Spire Architecture Silhouette) -->
+  <path d="M 600,120 L 640,240 L 680,380 L 720,540 L 480,540 L 520,380 L 560,240 Z" fill="#18120D" stroke="#C99A3D" stroke-width="1.5" opacity="0.75"/>
+  <circle cx="600" cy="115" r="14" fill="url(#goldGrad)"/>
+  <path d="M 600,85 L 600,102" stroke="#E5C46A" stroke-width="3"/>
+
+  <!-- Divine Architect's Compass and Measuring Cord (Sutra) -->
+  <g transform="translate(600, 390)">
+    <!-- Measuring Compass -->
+    <path d="M 0,-140 L -60,60 L -45,65 L 0,-115 L 45,65 L 60,60 Z" fill="url(#goldGrad)" filter="drop-shadow(0px 0px 10px rgba(229,196,106,0.5))"/>
+    <circle cx="0" cy="-135" r="12" fill="#F5EBD5"/>
+    <circle cx="0" cy="-135" r="5" fill="#3A1111"/>
+    
+    <!-- Measuring Cord (Sutra) Loop -->
+    <path d="M -110,40 Q -160,110 -70,160 Q 0,190 70,160 Q 160,110 110,40 Q 70,0 0,0 Q -70,0 -110,40 Z" fill="none" stroke="#E5C46A" stroke-width="3" stroke-dasharray="8,5" opacity="0.85"/>
+  </g>
+
+  <!-- Floating Golden Dust Sparks -->
+  <g fill="#E5C46A" opacity="0.6">
+    <circle cx="450" cy="220" r="2.5"/>
+    <circle cx="730" cy="260" r="2"/>
+    <circle cx="380" cy="420" r="3"/>
+    <circle cx="790" cy="460" r="2.5"/>
+    <circle cx="580" cy="180" r="3.5"/>
+    <circle cx="620" cy="520" r="2"/>
+  </g>
+
+  <!-- Devotional Sanskrit Ribbon Accent -->
+  <text x="600" y="680" font-family="'Cinzel', serif" font-size="16" letter-spacing="8" fill="#C99A3D" text-anchor="middle" opacity="0.75">
+    VASTU · ARCHITECTURE · SHILPA
+  </text>
+</svg>

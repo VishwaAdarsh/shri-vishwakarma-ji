@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldHead" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A3"/>
+      <stop offset="50%" stop-color="#C99A3D"/>
+      <stop offset="100%" stop-color="#7A5A17"/>
+    </linearGradient>
+    <linearGradient id="woodHandle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B5A2B"/>
+      <stop offset="50%" stop-color="#5C3818"/>
+      <stop offset="100%" stop-color="#3A220D"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#C99A3D" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+    <filter id="hammerGlow">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" fill="#0E0C09"/>
+  <rect width="400" height="300" fill="url(#grid)"/>
+
+  <!-- Blueprint Schematic Circles and Coordinate Guides -->
+  <circle cx="200" cy="150" r="110" fill="none" stroke="#C99A3D" stroke-width="1" stroke-dasharray="4,4" opacity="0.35"/>
+  <circle cx="200" cy="150" r="80" fill="none" stroke="#E5B869" stroke-width="0.75" stroke-dasharray="2,6" opacity="0.4"/>
+  <line x1="50" y1="150" x2="350" y2="150" stroke="#C99A3D" stroke-width="0.75" stroke-dasharray="5,5" opacity="0.3"/>
+  <line x1="200" y1="30" x2="200" y2="270" stroke="#C99A3D" stroke-width="0.75" stroke-dasharray="5,5" opacity="0.3"/>
+
+  <!-- Hammer Schematic -->
+  <g transform="translate(200, 150) rotate(-35)" filter="url(#hammerGlow)">
+    <!-- Wooden Handle -->
+    <rect x="-10" y="-30" width="20" height="170" rx="6" fill="url(#woodHandle)" stroke="#221305" stroke-width="1.5"/>
+    <path d="M -10,105 L 10,105 M -10,115 L 10,115 M -10,125 L 10,125" stroke="#C99A3D" stroke-width="1" opacity="0.6"/>
+    <!-- Metal Ferrule -->
+    <rect x="-11" y="-35" width="22" height="15" fill="#3D2E14" stroke="#C99A3D" stroke-width="1"/>
+    <!-- Steel Forged Head -->
+    <path d="M -55,-65 L 45,-65 Q 60,-65 60,-50 L 60,-30 Q 60,-15 45,-15 L -55,-15 Q -70,-15 -70,-30 L -70,-50 Q -70,-65 -55,-65 Z" fill="url(#goldHead)" stroke="#4A340C" stroke-width="2"/>
+    <!-- Peen & Face details -->
+    <rect x="58" y="-55" width="12" height="30" rx="3" fill="#FFEAA7" stroke="#8E6A21" stroke-width="1"/>
+    <polygon points="-70,-60 -85,-50 -85,-30 -70,-20" fill="#B38025" stroke="#4A340C" stroke-width="1"/>
+    <!-- Sacred Consecration Tilak -->
+    <circle cx="0" cy="-40" r="5" fill="#B31D1D"/>
+    <circle cx="0" cy="-40" r="2" fill="#FFF2A3"/>
+  </g>
+
+  <!-- Technical Spec Callout -->
+  <text x="30" y="270" fill="#C99A3D" font-family="'Cinzel', serif" font-size="11" letter-spacing="2">TRADITIONAL CRAFT · IMPACT &amp; FORGE</text>
+  <text x="370" y="270" text-anchor="end" fill="#E5B869" font-family="'Noto Serif Devanagari', serif" font-size="12">मुद्गर · कर्म साधन</text>
+</svg>

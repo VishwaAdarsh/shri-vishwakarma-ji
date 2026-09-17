@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="altarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C99A3D" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#7A1818" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0B0907" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5B869"/>
+      <stop offset="50%" stop-color="#C99A3D"/>
+      <stop offset="100%" stop-color="#8E6A21"/>
+    </linearGradient>
+    <linearGradient id="marigoldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF9E1B"/>
+      <stop offset="100%" stop-color="#D85C00"/>
+    </linearGradient>
+    <radialGradient id="lampFlame" cx="50%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#FFF5B8"/>
+      <stop offset="35%" stop-color="#FFA826"/>
+      <stop offset="70%" stop-color="#E84805"/>
+      <stop offset="100%" stop-color="#0B0907" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#0B0907"/>
+  <rect width="800" height="500" fill="url(#altarGlow)"/>
+
+  <!-- Altar Chauki -->
+  <polygon points="120,380 680,380 740,460 60,460" fill="#240D0D" stroke="#7A1818" stroke-width="2"/>
+  <polygon points="140,380 660,380 720,450 80,450" fill="#3D1212"/>
+  <path d="M 60,460 L 740,460 L 750,480 L 50,480 Z" fill="#140707" stroke="#C99A3D" stroke-width="1.5"/>
+
+  <!-- Sacred Backcloth Mandala -->
+  <g transform="translate(400, 240)" opacity="0.65">
+    <circle r="160" fill="none" stroke="#C99A3D" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <circle r="130" fill="none" stroke="#C99A3D" stroke-width="1" stroke-dasharray="2,6"/>
+    <polygon points="0,-140 99,-99 140,0 99,99 0,140 -99,99 -140,0 -99,-99" fill="none" stroke="#E5B869" stroke-width="1.5"/>
+    <polygon points="0,-140 121,-70 121,70 0,140 -121,70 -121,-70" fill="none" stroke="#C99A3D" stroke-width="1"/>
+  </g>
+
+  <!-- Divine Murti Silhouette -->
+  <g transform="translate(400, 220)" filter="url(#glow)">
+    <circle cx="0" cy="-60" r="32" fill="#1A1208" stroke="#C99A3D" stroke-width="2"/>
+    <path d="M -16,-92 L 0,-115 L 16,-92 Z" fill="url(#goldGrad)"/>
+    <circle cx="0" cy="-60" r="42" fill="none" stroke="#E5B869" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <path d="M -40,-20 Q 0,-35 40,-20 L 55,75 Q 0,85 -55,75 Z" fill="#18130B" stroke="#C99A3D" stroke-width="2"/>
+    <path d="M -35,-10 Q -75,-25 -70,-60" fill="none" stroke="#C99A3D" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 35,-10 Q 75,-25 70,-60" fill="none" stroke="#C99A3D" stroke-width="4" stroke-linecap="round"/>
+    <path d="M -40,15 Q -80,25 -75,60" fill="none" stroke="#C99A3D" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 40,15 Q 80,25 75,60" fill="none" stroke="#C99A3D" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="-70" cy="-60" r="6" fill="url(#goldGrad)"/>
+    <circle cx="70" cy="-60" r="6" fill="url(#goldGrad)"/>
+    <rect x="-82" y="55" width="14" height="6" fill="url(#goldGrad)"/>
+    <path d="M 72,55 L 82,65" stroke="url(#goldGrad)" stroke-width="3"/>
+  </g>
+
+  <!-- Mangal Kalash -->
+  <g transform="translate(240, 340)">
+    <ellipse cx="0" cy="20" rx="30" ry="24" fill="url(#goldGrad)" stroke="#5A4012" stroke-width="1.5"/>
+    <ellipse cx="0" cy="0" rx="20" ry="6" fill="#8E6A21"/>
+    <path d="M -6,14 H 6 M 0,8 V 20 M -6,8 V 14 M 6,14 V 20 M 0,8 H 6 M -6,20 H 0" fill="none" stroke="#7A1818" stroke-width="1.5"/>
+    <path d="M 0,0 Q -25,-30 -40,-25 Q -25,-10 0,0" fill="#2D5A27" stroke="#1B3A17"/>
+    <path d="M 0,0 Q -10,-40 -15,-45 Q -5,-25 0,0" fill="#3B7333" stroke="#1B3A17"/>
+    <path d="M 0,0 Q 10,-40 15,-45 Q 5,-25 0,0" fill="#3B7333" stroke="#1B3A17"/>
+    <path d="M 0,0 Q 25,-30 40,-25 Q 25,-10 0,0" fill="#2D5A27" stroke="#1B3A17"/>
+    <ellipse cx="0" cy="-18" rx="16" ry="20" fill="#5C3415" stroke="#7A1818" stroke-width="2"/>
+    <path d="M -16,-18 H 16" stroke="#C99A3D" stroke-width="2"/>
+    <circle cx="0" cy="-36" r="4" fill="#C99A3D"/>
+  </g>
+
+  <!-- Rested Consecrated Tools -->
+  <g transform="translate(480, 390)">
+    <g transform="rotate(-15)">
+      <rect x="-10" y="5" width="90" height="8" rx="2" fill="#6E4C1F" stroke="#3D290F"/>
+      <rect x="65" y="-6" width="30" height="30" rx="3" fill="url(#goldGrad)" stroke="#4A340C" stroke-width="1.5"/>
+      <circle cx="80" cy="9" r="4" fill="#B31D1D"/>
+      <circle cx="80" cy="9" r="1.5" fill="#FFEAA7"/>
+    </g>
+    <g transform="translate(-60, 20) rotate(20)">
+      <polygon points="0,0 70,0 80,4 70,8 0,8" fill="url(#goldGrad)" stroke="#4A340C" stroke-width="1"/>
+      <circle cx="75" cy="4" r="3" fill="#B31D1D"/>
+    </g>
+    <g transform="translate(90, 5) rotate(40)">
+      <path d="M 0,0 L 50,-15 M 0,0 L 50,15" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="5" fill="#FFEAA7" stroke="#7A1818" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- Marigold Garlands -->
+  <g fill="url(#marigoldGrad)" stroke="#B84800" stroke-width="1">
+    <path d="M 120,380 Q 240,430 360,400 Q 480,435 600,395 Q 680,420 720,440" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="2,4"/>
+    <circle cx="150" cy="385" r="9"/><circle cx="180" cy="395" r="9"/><circle cx="210" cy="405" r="9"/>
+    <circle cx="240" cy="411" r="9"/><circle cx="270" cy="411" r="9"/><circle cx="300" cy="406" r="9"/>
+    <circle cx="330" cy="401" r="9"/><circle cx="360" cy="400" r="9"/><circle cx="390" cy="407" r="9"/>
+    <circle cx="420" cy="414" r="9"/><circle cx="450" cy="416" r="9"/><circle cx="480" cy="412" r="9"/>
+    <circle cx="510" cy="406" r="9"/><circle cx="540" cy="402" r="9"/><circle cx="570" cy="401" r="9"/>
+    <circle cx="600" cy="405" r="9"/><circle cx="630" cy="414" r="9"/><circle cx="660" cy="425" r="9"/>
+  </g>
+
+  <!-- Glowing Diya -->
+  <g transform="translate(620, 360)">
+    <ellipse cx="0" cy="25" rx="36" ry="12" fill="url(#goldGrad)" stroke="#5A4012"/>
+    <path d="M -24,25 Q 0,15 24,25 L 30,12 Q 0,8 -30,12 Z" fill="#E5B869"/>
+    <ellipse cx="0" cy="12" rx="8" ry="4" fill="#3D1212"/>
+    <circle cx="0" cy="-6" r="28" fill="url(#lampFlame)"/>
+    <path d="M 0,12 Q -8,0 0,-18 Q 8,0 0,12 Z" fill="#FFF29E" filter="url(#glow)"/>
+    <path d="M 0,10 Q -4,2 0,-8 Q 4,2 0,10 Z" fill="#FFFFFF"/>
+    <path d="M 30,15 Q 45,-10 35,-35 Q 25,-60 40,-85" fill="none" stroke="#E5B869" stroke-width="1.5" opacity="0.35" stroke-linecap="round"/>
+  </g>
+
+  <text x="400" y="475" text-anchor="middle" fill="#E5B869" font-family="'Noto Serif Devanagari', serif" font-size="16" letter-spacing="3">
+    ॥ ॐ श्री विश्वकर्मणे नमः ॥
+  </text>
+</svg>

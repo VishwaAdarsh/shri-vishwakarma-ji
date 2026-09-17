@@ -1,0 +1,181 @@
+/**
+ * ====================================================================
+ * 🕉️ VISHWAKARMA — THE DIVINE ARCHITECT
+ * Design Tokens & CSS Variables
+ * ====================================================================
+ * Three-Layer Token Architecture:
+ * 1. Primitive Tokens: Raw hex codes, base units
+ * 2. Semantic Tokens: Purpose-based aliases for theme and state
+ * 3. Component Tokens: Targeted component-level assignments
+ */
+
+:root {
+  /* ------------------------------------------------------------------
+   * 1. PRIMITIVE COLOR TOKENS
+   * Deep darkness, antique gold, warm temple light, celestial dusk
+   * ------------------------------------------------------------------ */
+  --color-bg: #0B0907;
+  --color-bg-secondary: #15100C;
+  --color-gold: #C99A3D;
+  --color-gold-light: #E5C46A;
+  --color-gold-dark: #8C6721;
+  --color-maroon: #3A1111;
+  --color-maroon-dark: #220A0A;
+  --color-brown: #3A2617;
+  --color-ivory: #F5EBD5;
+  --color-text: #F4EDE0;
+  --color-text-muted: #B8AA96;
+  --color-text-subtle: #7A7062;
+
+  /* Accent highlights & divine glows */
+  --color-celestial-glow: rgba(201, 154, 61, 0.15);
+  --color-gold-glow: rgba(229, 196, 106, 0.25);
+  --color-flame-warmth: rgba(58, 17, 17, 0.4);
+
+  /* ------------------------------------------------------------------
+   * 2. SEMANTIC COLOR TOKENS
+   * ------------------------------------------------------------------ */
+  --surface-base: var(--color-bg);
+  --surface-elevated: var(--color-bg-secondary);
+  --surface-overlay: rgba(11, 9, 7, 0.88);
+  --surface-card: rgba(21, 16, 12, 0.75);
+
+  --text-primary: var(--color-text);
+  --text-secondary: var(--color-text-muted);
+  --text-tertiary: var(--color-text-subtle);
+  --text-accent: var(--color-gold-light);
+  --text-on-gold: #0B0907;
+
+  --border-subtle: rgba(201, 154, 61, 0.15);
+  --border-medium: rgba(201, 154, 61, 0.35);
+  --border-prominent: var(--color-gold);
+
+  /* Source classification badge colors */
+  --badge-vedic-bg: rgba(201, 154, 61, 0.12);
+  --badge-vedic-border: rgba(201, 154, 61, 0.4);
+  --badge-vedic-text: var(--color-gold-light);
+
+  --badge-puranic-bg: rgba(58, 17, 17, 0.35);
+  --badge-puranic-border: rgba(201, 154, 61, 0.25);
+  --badge-puranic-text: #E8A87C;
+
+  --badge-tradition-bg: rgba(58, 38, 23, 0.45);
+  --badge-tradition-border: rgba(184, 170, 150, 0.25);
+  --badge-tradition-text: var(--color-ivory);
+
+  --badge-regional-bg: rgba(21, 16, 12, 0.6);
+  --badge-regional-border: rgba(184, 170, 150, 0.2);
+  --badge-regional-text: var(--color-text-muted);
+
+  /* ------------------------------------------------------------------
+   * 3. TYPOGRAPHY TOKENS
+   * Display: Cinzel (Architectural dignity)
+   * Body: Inter (Modern readability)
+   * Sacred/Devotional: Noto Serif Devanagari (Classical Hindi & Sanskrit)
+   * ------------------------------------------------------------------ */
+  --font-display: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-devotional: 'Noto Serif Devanagari', 'Mangal', serif;
+  --font-sanskrit: 'Noto Serif Devanagari', 'Sanskrit Text', serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Fluid Typography Scale (Mobile -> Desktop) */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);      /* 12px - 13px */
+  --text-sm: clamp(0.8438rem, 0.80rem + 0.22vw, 0.9375rem);    /* 13.5px - 15px */
+  --text-base: clamp(0.9375rem, 0.88rem + 0.29vw, 1.0625rem);   /* 15px - 17px */
+  --text-lg: clamp(1.0625rem, 0.98rem + 0.41vw, 1.25rem);      /* 17px - 20px */
+  --text-xl: clamp(1.25rem, 1.12rem + 0.65vw, 1.5625rem);      /* 20px - 25px */
+  --text-2xl: clamp(1.5rem, 1.30rem + 1.0vw, 2.0rem);          /* 24px - 32px */
+  --text-3xl: clamp(1.875rem, 1.55rem + 1.6vw, 2.75rem);       /* 30px - 44px */
+  --text-4xl: clamp(2.25rem, 1.80rem + 2.25vw, 3.5rem);        /* 36px - 56px */
+  --text-5xl: clamp(2.75rem, 2.10rem + 3.25vw, 4.75rem);       /* 44px - 76px */
+  --text-display: clamp(3.25rem, 2.40rem + 4.25vw, 6.0rem);    /* 52px - 96px */
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.8;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.015em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.12em;
+  --tracking-widest: 0.25em;
+
+  /* ------------------------------------------------------------------
+   * 4. SPACING SCALE (4px / 8px harmonic grid)
+   * ------------------------------------------------------------------ */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* ------------------------------------------------------------------
+   * 5. CONTAINER & LAYOUT SCALE
+   * ------------------------------------------------------------------ */
+  --container-sm: 640px;
+  --container-md: 860px;
+  --container-lg: 1120px;
+  --container-xl: 1360px;
+  --container-gutter: clamp(1rem, 4vw, 3rem);
+
+  /* ------------------------------------------------------------------
+   * 6. RADII & ELEVATION (Borders, Shadows)
+   * ------------------------------------------------------------------ */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 0 30px rgba(201, 154, 61, 0.18);
+  --shadow-gold-bright: 0 0 50px rgba(229, 196, 106, 0.35);
+
+  /* ------------------------------------------------------------------
+   * 7. TRANSITIONS & TIMING CURVES
+   * Slow, divine, intentional motion
+   * ------------------------------------------------------------------ */
+  --ease-divine: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-gentle: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-sharp: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 800ms;
+  --duration-divine: 1400ms;
+
+  /* ------------------------------------------------------------------
+   * 8. Z-INDEX SYSTEM
+   * ------------------------------------------------------------------ */
+  --z-background: -1;
+  --z-base: 1;
+  --z-elevated: 10;
+  --z-sticky: 50;
+  --z-nav: 100;
+  --z-modal-backdrop: 500;
+  --z-modal: 600;
+  --z-audio-toggle: 700;
+  --z-tooltip: 800;
+  --z-loading: 1000;
+}

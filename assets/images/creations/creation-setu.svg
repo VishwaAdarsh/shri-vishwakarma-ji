@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#071217"/>
+      <stop offset="50%" stop-color="#0E232B"/>
+      <stop offset="100%" stop-color="#060C10"/>
+    </linearGradient>
+    <linearGradient id="bridgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5E4028"/>
+      <stop offset="50%" stop-color="#8C6542"/>
+      <stop offset="100%" stop-color="#4A321E"/>
+    </linearGradient>
+    <radialGradient id="setuSun" cx="50%" cy="15%" r="40%">
+      <stop offset="0%" stop-color="#E5C46A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#071217" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#oceanGrad)"/>
+  <rect width="800" height="600" fill="url(#setuSun)"/>
+
+  <!-- Stars & Celestial Mist -->
+  <g fill="#F5EBD5" opacity="0.35">
+    <circle cx="120" cy="80" r="1.5"/>
+    <circle cx="280" cy="50" r="1"/>
+    <circle cx="680" cy="90" r="2"/>
+    <circle cx="520" cy="40" r="1.5"/>
+  </g>
+
+  <!-- Ocean Waves -->
+  <path d="M 0,260 Q 100,245 200,260 T 400,260 T 600,260 T 800,260 L 800,600 L 0,600 Z" fill="#0A181F" opacity="0.8"/>
+  <path d="M 0,330 Q 120,315 240,330 T 480,330 T 720,330 T 800,330 L 800,600 L 0,600 Z" fill="#08141A" opacity="0.9"/>
+
+  <!-- The Floating Stone Bridge (Ram Setu) Perspective Causeway -->
+  <polygon points="400,180 430,180 620,540 180,540" fill="url(#bridgeGrad)" stroke="#C99A3D" stroke-width="1.5"/>
+
+  <!-- Floating Stone Blocks Inscribed With Divinity -->
+  <g fill="#2D221A" stroke="#C99A3D" stroke-width="1">
+    <rect x="230" y="470" width="100" height="45" rx="3"/>
+    <rect x="350" y="460" width="115" height="50" rx="3"/>
+    <rect x="485" y="475" width="95" height="42" rx="3"/>
+
+    <rect x="270" y="390" width="80" height="35" rx="3"/>
+    <rect x="370" y="380" width="90" height="38" rx="3"/>
+    <rect x="480" y="395" width="75" height="33" rx="3"/>
+
+    <rect x="310" y="320" width="60" height="25" rx="2"/>
+    <rect x="385" y="315" width="65" height="28" rx="2"/>
+    <rect x="460" y="325" width="55" height="24" rx="2"/>
+
+    <rect x="345" y="260" width="45" height="18" rx="2"/>
+    <rect x="400" y="255" width="50" height="20" rx="2"/>
+    <rect x="455" y="262" width="40" height="16" rx="2"/>
+  </g>
+
+  <!-- Golden Ray Alignments (Engineering Precision of Nala) -->
+  <line x1="400" y1="180" x2="180" y2="540" stroke="#E5C46A" stroke-width="1" stroke-dasharray="6,6" opacity="0.6"/>
+  <line x1="430" y1="180" x2="620" y2="540" stroke="#E5C46A" stroke-width="1" stroke-dasharray="6,6" opacity="0.6"/>
+
+  <text x="400" y="570" font-family="'Cinzel', serif" font-size="14" letter-spacing="5" fill="#C99A3D" text-anchor="middle">
+    RAM SETU · NALA &amp; VISHWAKARMA LINEAGE
+  </text>
+</svg>

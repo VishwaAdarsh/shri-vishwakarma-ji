@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pujaBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080605"/>
+      <stop offset="60%" stop-color="#21120B"/>
+      <stop offset="100%" stop-color="#0B0907"/>
+    </linearGradient>
+    <radialGradient id="sacredAltarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD15C" stop-opacity="0.5"/>
+      <stop offset="35%" stop-color="#E5C46A" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#3A1111" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#080605" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brassKalash" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8C6721"/>
+      <stop offset="40%" stop-color="#FFF0A8"/>
+      <stop offset="70%" stop-color="#C99A3D"/>
+      <stop offset="100%" stop-color="#6B4B10"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#pujaBg)"/>
+  <circle cx="600" cy="380" r="380" fill="url(#sacredAltarGlow)"/>
+
+  <!-- Consecrated Altar Pedestal -->
+  <rect x="250" y="480" width="700" height="45" rx="6" fill="#2E1C12" stroke="#C99A3D" stroke-width="2"/>
+  <rect x="230" y="525" width="740" height="20" rx="3" fill="#1A1009"/>
+
+  <!-- Mangal Kalash (Sacred Pot with Mango Leaves and Coconut) -->
+  <g transform="translate(600, 360)">
+    <!-- Mango Leaves -->
+    <path d="M 0,-40 C -35,-85 -70,-80 -60,-40 Z" fill="#2F5C24" stroke="#1B3813" stroke-width="1.5"/>
+    <path d="M 0,-40 C 35,-85 70,-80 60,-40 Z" fill="#2F5C24" stroke="#1B3813" stroke-width="1.5"/>
+    <path d="M 0,-40 C -20,-105 -35,-110 -25,-40 Z" fill="#3D7530" stroke="#1B3813" stroke-width="1.5"/>
+    <path d="M 0,-40 C 20,-105 35,-110 25,-40 Z" fill="#3D7530" stroke="#1B3813" stroke-width="1.5"/>
+    <path d="M 0,-40 C -10,-125 10,-125 0,-40 Z" fill="#4B8C3C" stroke="#1B3813" stroke-width="1.5"/>
+
+    <!-- Coconut (Nariyal) -->
+    <ellipse cx="0" cy="-60" rx="28" ry="36" fill="#5C3B1E" stroke="#3D2410" stroke-width="2"/>
+    <path d="M -12,-85 L -5,-95 L 5,-95 L 12,-85 Z" fill="#3D2410"/>
+
+    <!-- Sacred Red Moli Thread on Kalash Neck -->
+    <ellipse cx="0" cy="-35" rx="38" ry="10" fill="#B3241C"/>
+
+    <!-- Brass Kalash Body -->
+    <path d="M -35,-35 C -55,-10 -65,40 0,65 C 65,40 55,-10 35,-35 Z" fill="url(#brassKalash)" stroke="#C99A3D" stroke-width="1.5"/>
+    <!-- Swastika on Kalash -->
+    <text x="0" y="25" font-family="'Noto Serif Devanagari', serif" font-size="28" font-weight="bold" fill="#B3241C" text-anchor="middle">
+      卐
+    </text>
+  </g>
+
+  <!-- Rested Craftsman Tools with Tilak -->
+  <!-- Chisel (Left) -->
+  <g transform="translate(380, 460) rotate(-15)">
+    <rect x="-6" y="-60" width="12" height="75" rx="3" fill="#C99A3D"/>
+    <polygon points="-6,15 6,15 0,35" fill="#E5C46A"/>
+    <!-- Red Vermilion Tilak -->
+    <circle cx="0" cy="-20" r="4" fill="#B3241C"/>
+    <circle cx="0" cy="-20" r="1.5" fill="#FFF5DB"/>
+  </g>
+
+  <!-- Hammer (Left Center) -->
+  <g transform="translate(470, 460) rotate(10)">
+    <rect x="-5" y="-55" width="10" height="70" rx="3" fill="#8C6721"/>
+    <rect x="-24" y="-70" width="48" height="18" rx="3" fill="#C99A3D"/>
+    <!-- Red Vermilion Tilak -->
+    <circle cx="0" cy="-61" r="4" fill="#B3241C"/>
+  </g>
+
+  <!-- Architect's Caliper/Compass (Right Center) -->
+  <g transform="translate(730, 455) rotate(-10)">
+    <line x1="0" y1="-50" x2="-22" y2="25" stroke="#C99A3D" stroke-width="5" stroke-linecap="round"/>
+    <line x1="0" y1="-50" x2="22" y2="25" stroke="#C99A3D" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="0" cy="-50" r="6" fill="#F5EBD5"/>
+    <!-- Red Vermilion Tilak -->
+    <circle cx="0" cy="-50" r="3" fill="#B3241C"/>
+  </g>
+
+  <!-- Sacred Brass Diya Lamp (Right) -->
+  <g transform="translate(820, 460)">
+    <ellipse cx="0" cy="15" rx="35" ry="12" fill="url(#brassKalash)"/>
+    <path d="M -35,15 Q 0,35 35,15 Z" fill="#6B4B10"/>
+    <!-- Flame -->
+    <path d="M 0,-30 C -12,0 -8,10 0,15 C 8,10 12,0 0,-30 Z" fill="#FFA500"/>
+    <path d="M 0,-20 C -6,0 -4,8 0,12 C 4,8 6,0 0,-20 Z" fill="#FFFF99"/>
+  </g>
+
+  <!-- Marigold Garland Draped Over Altar -->
+  <g fill="#FF8C00" stroke="#FF5500" stroke-width="1">
+    <circle cx="300" cy="482" r="10"/>
+    <circle cx="320" cy="485" r="11"/>
+    <circle cx="342" cy="483" r="10"/>
+    <circle cx="530" cy="485" r="11"/>
+    <circle cx="552" cy="483" r="10"/>
+    <circle cx="650" cy="483" r="10"/>
+    <circle cx="672" cy="485" r="11"/>
+    <circle cx="870" cy="483" r="10"/>
+    <circle cx="890" cy="485" r="11"/>
+  </g>
+
+  <text x="600" y="660" font-family="'Cinzel', serif" font-size="16" letter-spacing="6" fill="#C99A3D" text-anchor="middle">
+    THE SANCTIFIED WORKSHOP · TOOLS AT REST
+  </text>
+</svg>

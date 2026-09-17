@@ -1,0 +1,214 @@
+/**
+ * ====================================================================
+ * 🕉️ VISHWAKARMA — THE DIVINE ARCHITECT
+ * Animation Principles & Divine Motion System
+ * ====================================================================
+ * Ethos: Slow + Intentional + Divine
+ * No aggressive bouncing, no flashy gimmicks, no scroll hijacking.
+ */
+
+/* --------------------------------------------------------------------
+ * 1. CELESTIAL GLOW & LIGHT MOVEMENT
+ * -------------------------------------------------------------------- */
+@keyframes celestialGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+.anim-celestial-glow {
+  animation: celestialGlow 8s ease-in-out infinite;
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.anim-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(201, 154, 61, 0) 0%,
+    rgba(229, 196, 106, 0.4) 50%,
+    rgba(201, 154, 61, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: goldShimmer 6s infinite linear;
+}
+
+/* --------------------------------------------------------------------
+ * 2. HERO ENTRANCE CINEMATIC SEQUENCE (CSS Core / GSAP Enhancer)
+ * -------------------------------------------------------------------- */
+.hero-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s var(--ease-divine), transform 1.2s var(--ease-divine);
+}
+
+.hero-fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-scale-in {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 1.6s var(--ease-divine), transform 1.6s var(--ease-divine);
+}
+
+.hero-scale-in.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Specific Stagger Delays for Hero sequence */
+.hero-delay-bg       { transition-delay: 200ms; }
+.hero-delay-glow     { transition-delay: 400ms; }
+.hero-delay-artwork  { transition-delay: 600ms; }
+.hero-delay-mantra   { transition-delay: 850ms; }
+.hero-delay-title    { transition-delay: 1050ms; }
+.hero-delay-subtitle { transition-delay: 1250ms; }
+.hero-delay-copy     { transition-delay: 1450ms; }
+.hero-delay-cta      { transition-delay: 1650ms; }
+.hero-delay-scroll   { transition-delay: 1900ms; }
+
+/* --------------------------------------------------------------------
+ * 3. REVEAL & FADE TRANSITIONS
+ * -------------------------------------------------------------------- */
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-divine),
+              transform var(--duration-slow) var(--ease-divine);
+  will-change: opacity, transform;
+}
+
+.reveal-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity var(--duration-divine) var(--ease-divine),
+              transform var(--duration-divine) var(--ease-divine);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --------------------------------------------------------------------
+ * 4. STAGGERED DELAY UTILITIES
+ * -------------------------------------------------------------------- */
+.delay-1 { transition-delay: 100ms; }
+.delay-2 { transition-delay: 200ms; }
+.delay-3 { transition-delay: 350ms; }
+.delay-4 { transition-delay: 500ms; }
+.delay-5 { transition-delay: 700ms; }
+
+/* --------------------------------------------------------------------
+ * 5. SUBTLE HOVER MOTION
+ * -------------------------------------------------------------------- */
+.hover-lift {
+  transition: transform var(--duration-normal) var(--ease-divine),
+              box-shadow var(--duration-normal) var(--ease-divine);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* --------------------------------------------------------------------
+ * 5.1 PHASE 3 DEVOTIONAL & CRAFTSMANSHIP KEYFRAMES
+ * -------------------------------------------------------------------- */
+@keyframes mantraBreathe {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.92);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.75;
+  }
+}
+
+@keyframes sacredFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes goldSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes blueprintDraw {
+  0% {
+    stroke-dashoffset: 400;
+    opacity: 0.2;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------------
+ * 6. ACCESSIBILITY: PREFERS-REDUCED-MOTION
+ * When user requests reduced motion, disable all decorative animations
+ * -------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-fade,
+  .reveal-scale,
+  .hero-fade-in,
+  .hero-scale-in,
+  .loader-om,
+  .loader-title-hindi,
+  .loader-title-en,
+  .loader-divider {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .anim-celestial-glow,
+  .anim-shimmer,
+  .particle-mote,
+  .scroll-arrow-icon {
+    animation: none !important;
+  }
+
+  .loading-screen {
+    display: none !important;
+  }
+}
